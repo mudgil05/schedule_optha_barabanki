@@ -18,7 +18,7 @@ module.exports = async function handler(req, res) {
   const { imageBase64, mimeType, pageNumber, totalPages } = req.body || {};
   if (!imageBase64) return res.status(400).json({ error: 'No image data provided' });
 
-  const MODEL = 'gemini-1.5-flash';   // faster than 2.5-flash-lite for this use case
+  const MODEL = 'gemini-2.0-flash';   // faster than 2.5-flash-lite for this use case
 
   const PROMPT = `You are extracting data from a photographed NMC medical college timetable.
 The image may be rotated or photographed. Read it carefully in the correct orientation.
